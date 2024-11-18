@@ -17,18 +17,37 @@
     
     <main>
     <h2>Make a choice:</h2>
-    <div class="game-area">
+    <p>Select one of the buttons below to play against the computer</p>
+    <section class="game-area">
+        <div class="controls-area">
+            <button aria-label="Rock" class="btn" id="rock">Rock</button>
+            <button aria-label="Paper"class="btn" id="paper">Paper</button>
+            <button aria-label="Scissors" class="btn" id="scissors">Scissors</button>
 
-    </div>
-    <div class="score-area">
-        <p>Your score: <span id="userScore">0</span></p>
-        <p>Computer score: <span id="computerScore">0</span></p>
+        </div>
 
-    </div>
-    <div class="number-tries">
+        <div class="user">
+            <img id="user-image" src="" alt="Rock Paper Scissors">
+
+        </div>
+
+        <div class="computer">
+            <img id="computer-image" src="" alt="Rock Paper Scissors">
+
+        </div>
+
+    </section>
+    <section class="score-area">
+        <h3>Score</h3>
+        <p>Your score: <span id="user-score">0</span></p>
+        <p>Computer score: <span id="computer-score">0</span></p>
+
+    </section>
+    <section class="number-tries">
+        <h3>Attempts Left</h3>
         <p>Number of tries:<span id="tries">5</span></p>
 
-    </div>
+    </section>
     </main>
 
     <footer>
