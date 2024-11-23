@@ -1,6 +1,110 @@
 /*Google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-body{
-    background-color: aquamarine;
+html,body{
+    background-color: rgb(255, 228, 196);
+    height: 100%;
+    margin:0;
+}
+
+h1,h2,h3{
+    text-align: center;
+}
+
+.container{
+    min-height: 100%;
+    display:flex;
+    flex-direction: column;
+}
+
+header{
+    padding:20px;
+}
+
+main{
+    flex:1;
+}
+
+#paragraph1{
+    text-align: center;
+}
+
+.game-area{
+    background-color: rgb(196, 255, 196);
+    width:75%;
+    height: 300px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 1%;
+    text-align: center;
+    border-radius: 1rem black;
+}
+
+.controls-area{
+    margin:20px;
+}
+
+img{
+    width:200px;
+    height: 100px;
+    
+}
+
+.user{
+    margin-bottom:20px;
+    background-color: chartreuse;
+    width:200px;
+    height: 100px;
+    float: left;
+}
+
+#user-image{
+    mix-blend-mode: multiply;
+}
+
+.computer{
+    
+    background-color: rgb(199, 81, 81);
+    width:200px;
+    height: 100px;
+    float:right;
+
+}
+
+#computer-image{
+    mix-blend-mode: multiply;
+}
+
+.score-area{
+    background-color: rgb(245, 242, 95);
+    height: 100px;
+}
+
+.score-area p:nth-of-type(1){
+    background-color: rgb(92, 167, 108);
+    float:left;
+}
+
+.score-area p:nth-of-type(2){
+    background-color: rgb(241,131,150);
+    float:right;
+}
+
+footer{
+    margin-top: auto;
+    background-color:rgb(255, 190, 111);;
+    padding:10px;
+    height: 100px;
+}
+
+/*Media queries*/
+
+@media (min-width:768px){
+    .score-area{
+        background-color: rgb(245, 242, 95);
+        margin-left: 95px;
+        margin-right: 95px;
+        height: 100px;
+    }
+    
 }
