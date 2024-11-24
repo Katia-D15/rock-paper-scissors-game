@@ -31,7 +31,7 @@ function rockUser(){
     user.appendChild(img);
     user.appendChild(sentence)
 
-    playGame();
+    //playGame();
 
 }
 
@@ -54,7 +54,7 @@ function paperUser(){
     user.appendChild(img);
     user.appendChild(sentence)
    
-    playGame();
+    //playGame();
 
 }
 
@@ -77,8 +77,37 @@ function scissorsUser(){
     user.appendChild(img);
     user.appendChild(sentence)
   
-    playGame();
+   // playGame();
 }
 
 
+function computerChoices(){
+
+    computer.innerHTML="";
+
+    let computerChoice=choices[Math.floor(Math.random()*3)];
+
+    let img = document.createElement('img');
+    let sentence = document.createElement('p')
+    
+    
+
+    if(computerChoice==='rock'){
+        img.src='assets/images/rock.jpg';
+        img.alt='Rock';
+        sentence.textContent='Computer choose rock';
+        
+    } else if(computerChoice==='paper'){
+        img.src='assets/images/paper.jpg'
+        img.alt='Paper';
+        sentence.textContent='Computer choose paper';
+
+    }else if(computerChoice==='scissors'){
+        img.src='assets/images/scissors.jpg'
+        img.alt='Scissors';
+        sentence.textContent='Computer choose scissors';
+    }
+    computer.appendChild(img);
+    computer.appendChild(sentence);
+}
 
