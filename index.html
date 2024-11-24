@@ -21,9 +21,15 @@
     <p id="paragraph1">Select one of the buttons below to play against the computer</p>
     <section class="game-area">
         <div class="controls-area">
-            <button aria-label="Rock" class="btn" id="rock">Rock</button>
-            <button aria-label="Paper"class="btn" id="paper">Paper</button>
-            <button aria-label="Scissors" class="btn" id="scissors">Scissors</button>
+            <button aria-label="Rock" class="btn" id="rock" onclick="rockUser();computerChoices();numberTries()">Rock</button>
+            <button aria-label="Paper"class="btn" id="paper" onclick="paperUser();computerChoices();numberTries()">Paper</button>
+            <button aria-label="Scissors" class="btn" id="scissors" onclick="scissorsUser();computerChoices();numberTries()">Scissors</button>
+            <br>
+             
+            <!--
+            <img id="user-image" src="assets/images/rock.jpg" alt="Rock Paper Scissors">
+            <img id="user-image" src="assets/images/paper.jpg" alt="Rock Paper Scissors">
+            <img id="user-image" src="assets/images/scissors.jpg" alt="Rock Paper Scissors">-->
 
         </div>
 
@@ -53,6 +59,9 @@
 
     <footer>
         <h3>Game Rules</h3>
+        <p>the stone breaks the scissors</p>
+        <p>the paper wraps the rock</p>
+        <p>scissors cut paper</p>
     </footer>
     
 
