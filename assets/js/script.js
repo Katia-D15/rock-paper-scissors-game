@@ -4,7 +4,6 @@ const scissors = document.getElementById('scissors');
 const gameArea = document.getElementsByClassName('game-area')[0];
 const user = document.getElementsByClassName('user')[0];
 const computer = document.getElementsByClassName('computer')[0];
-const userImage = document.getElementById('user-image');
 const choices=["rock","paper","scissors"];
 const scoreArea = document.getElementsByClassName('score-area')[0];
 
@@ -17,8 +16,7 @@ const scoreArea = document.getElementsByClassName('score-area')[0];
 
 
 function rockUser(){
-    userChoice="rock";
-    user.innerHTML='';
+    user.innerHTML="";
     let sentence = document.createElement('p')
     sentence.textContent='You choose rock';
 
@@ -26,12 +24,9 @@ function rockUser(){
     img.src='assets/images/rock.jpg';
     img.alt ='Rock';
 
-    
-
     user.appendChild(img);
     user.appendChild(sentence)
 
-    //playGame();
 
 }
 
@@ -40,8 +35,7 @@ function rockUser(){
  */
 
 function paperUser(){
-    userChoice="paper";
-    user.innerHTML='';
+    user.innerHTML="";
     let sentence = document.createElement('p')
     sentence.textContent='You choose paper';
 
@@ -49,12 +43,9 @@ function paperUser(){
     img.src='assets/images/paper.jpg';
     img.alt ='Paper';
 
-    
-
     user.appendChild(img);
     user.appendChild(sentence)
    
-    //playGame();
 
 }
 
@@ -63,8 +54,7 @@ function paperUser(){
  */
 
 function scissorsUser(){
-    userChoice="scissors";
-    user.innerHTML='';
+    user.innerHTML="";
     let sentence = document.createElement('p')
     sentence.textContent='You choose scissors';
 
@@ -72,23 +62,23 @@ function scissorsUser(){
     img.src='assets/images/scissors.jpg';
     img.alt ='Scissors';
 
-    
-
     user.appendChild(img);
     user.appendChild(sentence)
   
-   // playGame();
 }
 
 
-function computerChoices(){
+/**
+ * function that defines the choice of computer
+ */
 
+function computerChoices(){
     computer.innerHTML="";
 
     let computerChoice=choices[Math.floor(Math.random()*3)];
 
     let img = document.createElement('img');
-    let sentence = document.createElement('p')
+    let sentence = document.createElement('p');
     
     
 
@@ -109,5 +99,65 @@ function computerChoices(){
     }
     computer.appendChild(img);
     computer.appendChild(sentence);
+
+    return computerChoice;
 }
+
+/**
+ * function that compares the user's choice with the computer's choice
+ */
+
+function playGame(userChoice){
+    //Computer choice
+    let computerChoice = computerChoices();
+
+
+    
+    //User choice
+    if(userChoice==="rock"){
+        rockUser();
+    }else if(userChoice==="paper"){
+        paperUser();
+    }else if(userChoice==="scissors"){
+        scissorsUser();
+    }
+
+
+    //Compare choices
+    if(userChoice===computerChoice){
+        
+    } else if(
+        (userChoice==="rock" && computerChoice==="scissors") ||
+        (userChoice==="paper" && computerChoice==="rock") ||
+        (userChoice==="scissors" && computerChoice==="paper")
+    ){
+        
+        userScore();
+    }else {
+        computerScore();
+    }
+}
+
+/**
+ * function that defines the user's score
+ */
+function userScore(){
+    let userPoints=parseInt(document.getElementById('user-score').innerText);
+    document.getElementById('user-score').innerText=userPoints+1;
+}
+
+/**
+ * function that defines the computer's score
+ */
+function computerScore(){
+    let computerPoints=parseInt(document.getElementById('computer-score').innerText);
+    document.getElementById('computer-score').innerText=computerPoints+1;
+}
+
+/**
+ * function that defines the number of attempts
+ */
+
+
+
 
