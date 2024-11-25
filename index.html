@@ -20,10 +20,11 @@
     <h2>Make a choice:</h2>
     <p id="paragraph1">Select one of the buttons below to play against the computer</p>
     <section class="game-area">
+        <h3>Game area</h3>
         <div class="controls-area">
-            <button aria-label="Rock" class="btn" id="rock" onclick="rockUser();computerChoices();numberTries();playGame('rock')">Rock</button>
-            <button aria-label="Paper"class="btn" id="paper" onclick="paperUser();computerChoices();numberTries();playGame('paper')">Paper</button>
-            <button aria-label="Scissors" class="btn" id="scissors" onclick="scissorsUser();computerChoices();numberTries();playGame('scissors')">Scissors</button>
+            <button aria-label="Rock"     class="btn" id="rock" onclick="rockUser();computerChoices();numberTries()">Rock</button>
+            <button aria-label="Paper"    class="btn" id="paper" onclick="paperUser();computerChoices();numberTries()">Paper</button>
+            <button aria-label="Scissors" class="btn" id="scissors" onclick="scissorsUser();computerChoices();numberTries()">Scissors</button>
             <br>
              
             <!--
@@ -48,6 +49,7 @@
         <h3>Score</h3>
         <p>Your score: <span id="user-score">0</span></p>
         <p>Computer score: <span id="computer-score">0</span></p>
+        <div id="result"></div>
 
     </section>
     <section class="number-tries">

@@ -6,16 +6,32 @@ const user = document.getElementsByClassName('user')[0];
 const computer = document.getElementsByClassName('computer')[0];
 const choices=["rock","paper","scissors"];
 const scoreArea = document.getElementsByClassName('score-area')[0];
+const userScoreSpan = document.getElementById("user-score");
+const computerScoreSpan = document.getElementById("computer-score");
+const resultDiv = document.getElementById("result");
 
 
+//Event Listeners
+rock.addEventListener("click",chooseRock);
+paper.addEventListener("click",choosePaper);
+scissors.addEventListener("click",chooseScissors);
 
+function chooseRock(){
+    playGame("rock");
+}
 
+function choosePaper(){
+    playGame("paper");
+}
+function chooseScissors(){
+    playGame("scissors");
+}
 /**
  * Function that defines the image and the choice made by the user when he clicks on the rock button
  */
 
 
-function rockUser(){
+function rockUser() {
     user.innerHTML="";
     let sentence = document.createElement('p')
     sentence.textContent='You choose rock';
@@ -68,6 +84,8 @@ function scissorsUser(){
 }
 
 
+
+
 /**
  * function that defines the choice of computer
  */
@@ -75,88 +93,121 @@ function scissorsUser(){
 function computerChoices(){
     computer.innerHTML="";
 
-    let computerChoice=choices[Math.floor(Math.random()*3)];
+    let choiceComputer = choices[Math.floor(Math.random()*3)];
 
     let img = document.createElement('img');
     let sentence = document.createElement('p');
     
     
 
-    if(computerChoice==='rock'){
+    if(choiceComputer==='rock'){
         img.src='assets/images/rock.jpg';
         img.alt='Rock';
         sentence.textContent='Computer choose rock';
         
-    } else if(computerChoice==='paper'){
-        img.src='assets/images/paper.jpg'
+    } else if(choiceComputer==='paper'){
+        img.src='assets/images/paper.jpg';
         img.alt='Paper';
         sentence.textContent='Computer choose paper';
 
-    }else if(computerChoice==='scissors'){
-        img.src='assets/images/scissors.jpg'
+    }else if(choiceComputer==='scissors'){
+        img.src='assets/images/scissors.jpg';
         img.alt='Scissors';
         sentence.textContent='Computer choose scissors';
     }
     computer.appendChild(img);
     computer.appendChild(sentence);
 
-    return computerChoice;
+    return choiceComputer;
 }
 
 /**
  * function that compares the user's choice with the computer's choice
  */
-
-function playGame(userChoice){
-    //Computer choice
-    let computerChoice = computerChoices();
-
-
-    
-    //User choice
-    if(userChoice==="rock"){
-        rockUser();
-    }else if(userChoice==="paper"){
-        paperUser();
-    }else if(userChoice==="scissors"){
-        scissorsUser();
-    }
-
-
-    //Compare choices
+function winner(userChoice,computerChoice){
     if(userChoice===computerChoice){
-        
-    } else if(
+        console.log("draw");
+        return "draw";
+    } 
+    else if(
         (userChoice==="rock" && computerChoice==="scissors") ||
         (userChoice==="paper" && computerChoice==="rock") ||
         (userChoice==="scissors" && computerChoice==="paper")
     ){
-        
-        userScore();
-    }else {
-        computerScore();
+        console.log("user win");
+        return "user";
+    } else{
+        console.log("computer win");
+        return "computer";
+    }
+
+}
+
+
+
+function playGame(userChoice){
+    //Computer choice
+    const computerChoice = computerChoices();
+    const result = winner(userChoice, computerChoice);
+    score(result);
+
+}
+/**
+ * function that defines the score
+ */
+let userScore = 0;
+let computerScore =0;
+
+function score(result){
+    if(result === "user"){
+        userScore++;
+        userScoreSpan.textContent = userScore;
+        resultDiv.textContent="You win!";
+    }else if(result === "computer"){
+        computerScore++;
+        computerScoreSpan.textContent = computerScore;
+        resultDiv.textContent="Computer wins!";
+    }else{
+        resultDiv.textContent="It's a draw!";
     }
 }
 
-/**
- * function that defines the user's score
- */
-function userScore(){
-    let userPoints=parseInt(document.getElementById('user-score').innerText);
-    document.getElementById('user-score').innerText=userPoints+1;
-}
-
-/**
- * function that defines the computer's score
- */
-function computerScore(){
-    let computerPoints=parseInt(document.getElementById('computer-score').innerText);
-    document.getElementById('computer-score').innerText=computerPoints+1;
-}
 
 /**
  * function that defines the number of attempts
  */
+function numberTries(userChoice){
+    let tries = parseInt(document.getElementById('tries').innerText);
+    if(tries<=5 && tries>1){
+        document.getElementById('tries').innerText=--tries;
+        playGame(userChoice);
+    }else if(tries===1){
+        document.getElementById('tries').innerText=0;
+        let phrase = document.createElement('p');
+        phrase.textContent="Finish Game";
+        document.getElementById('tries').appendChild(phrase);
+        endGame();
+    }
+}
+/**
+ * function that defines the end of game
+ */
+function endGame(){
+    rock.disabled = true;
+    paper.disabled = true;
+    scissors.disabled = true;
+    
+}
+/*
+function finish(){
+    if(userScoreSpan>computerScoreSpan){
+        alert("You win!");
+    }else if(userScoreSpan===computerScoreSpan){
+        alert("It's a draw!");
+    }else if(computerScoreSpan>userScoreSpan){
+        alert("Computer wins!");
+    }
+}*/
 
 
 
