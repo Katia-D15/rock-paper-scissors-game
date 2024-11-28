@@ -10,6 +10,7 @@ const computerScoreSpan = document.getElementById("computer-score");
 const resultDiv = document.getElementById("result");
 
 
+
 const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
 const scissors = document.getElementById('scissors');
@@ -146,7 +147,7 @@ function getcomputerChoice(){
  */
 
 function winner(userChoice,computerChoice){
-    console.log("Comparando escolhas:",userChoice,computerChoice);
+    console.log("Comparing choices:",userChoice,computerChoice);
     if(userChoice===computerChoice){
         console.log("draw");
         return "draw";
@@ -167,11 +168,10 @@ function winner(userChoice,computerChoice){
 
 
 /**
- * Function Play Game
+ * Function that defines the logic of the game
  */
 
 function playGame(userChoice){
-    //Computer choice
     const computerChoice = getcomputerChoice();
     const result = winner(userChoice, computerChoice);
     score(result);
@@ -210,11 +210,9 @@ function numberTries(){
     }else if(tries===1){
         document.getElementById('tries').innerText=0;
         let phrase = document.createElement('p');
-        phrase.textContent="Finish Game"; 
-            
+        phrase.textContent="Finish Game";   
         document.getElementById('tries').appendChild(phrase);
         endGame();
-        
         
     }
 }
@@ -225,23 +223,33 @@ function numberTries(){
 
 function finish(){
     if(userScore===computerScore){
-        alert(" Draw!")
+
+        let finalSentence=document.createElement('strong');
+        finalSentence.textContent="Draw!!!";
+        document.getElementById('tries').appendChild(finalSentence);
+
     }else if(userScore > computerScore){
-        alert(" You won!")
+        
+        let finalSentence=document.createElement('strong');
+        finalSentence.textContent="You won!!!";
+        document.getElementById('tries').appendChild(finalSentence);
+        
     }else if(userScore < computerScore){
-        alert(" You lost!")
+        
+        let finalSentence=document.createElement('strong');
+        finalSentence.textContent="You lost!!!";
+        document.getElementById('tries').appendChild(finalSentence);
+        
     }
 }
 /**
- * function that defines the end of game
+ * function that defines the end of game and disabled the buttons
  */
 function endGame(){
-    finish();
     rock.disabled = true;
     paper.disabled = true;
     scissors.disabled = true;
-    
-      
+    finish();     
 }
 
 

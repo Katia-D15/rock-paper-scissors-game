@@ -7,7 +7,7 @@ Rock, Paper, Scissors is a game written in JavaScript, fully responsive that wil
 
 ## Features
 
--_Title_
+-_Header_
 
 - The page is composed of the website title: Rock, Paper, Scissors Game, where the user easily understands that the website is a game.
 
@@ -35,15 +35,19 @@ Rock, Paper, Scissors is a game written in JavaScript, fully responsive that wil
 
 ## Testing
 
+- I confirmed that the colors and fonts choosen are easy to read and accessible by running it through lighthouse in devtools.
+- I confirmed that the game results are always correct. 
+
 ### Validator Testing
 
 - HTML
-    - No errors were found when passing through the official [W3C validator]()
+    - No errors were found when passing through the official [W3C HTML validator](https://validator.w3.org/nu/#textarea)
 
 - CSS 
-    - No errors were found when passing through the official [(W3C validator)]()
+    - No errors were found when passing through the official [(W3C CSS validator (Jigsaw))](https://jigsaw.w3.org/css-validator/#validate_by_input)
     
 - JavaScript
+    - No errors were found when passing through the official [(JSHint JavaScript Validator)](https://jshint.com/)
 
 
 ### Unfixed Bugs
@@ -59,7 +63,7 @@ Rock, Paper, Scissors is a game written in JavaScript, fully responsive that wil
   - In 'Source' select the branch and the root folder
   - Click on Save
 
-  The live link can be found here:
+  The live link can be found here: ()
 
 
 ## Credits
@@ -67,7 +71,9 @@ Rock, Paper, Scissors is a game written in JavaScript, fully responsive that wil
 
 ### Content
 
+- The styles instructions to make game are was taken from: Ultimate Rock, Paper, Scissors
+
 
 ### Media
 
-- The images used on the page was taken from the web site:
+- The images used on the page was taken from the web site:[(Vecteezy)](https://www.vecteezy.com/vector-art/3027817-rock-paper-scissors-hand-gesture)

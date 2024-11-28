@@ -1,139 +1,160 @@
 /*Google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-html,body{
+
+/*General styles*/
+html,
+body {
     background-color: rgb(255, 228, 196);
     height: 100%;
-    margin:0;
+    margin: 0;
 }
 
-h1,h2{
+h1,
+h2 {
+    font-family: 'Oswald', sans-serif;
     text-align: center;
 }
 
 
-.container{
+.container {
     min-height: 100%;
-    display:flex;
+    display: flex;
     flex-direction: column;
 }
 
-header{
-    padding:20px;
+header {
+    padding: 20px;
 }
 
-main{
-    flex:1;
+
+/*Main*/
+main {
+    flex: 1;
 }
 
-#paragraph1{
+#paragraph1 {
     text-align: center;
 }
 
-.game-area{
+
+/*Game area*/
+.game-area {
     background-color: #ffffff;
-    width:75%;
+    width: 75%;
     height: 400px;
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
     margin-top: 1%;
     text-align: center;
     display: table-cell;
 }
 
-.controls-area{
-    margin:20px;
+.controls-area {
+    margin: 20px;
 }
 
-.btn{
+.btn {
     background-color: #88dae0;
     font-size: 20px;
     margin: 3px;
 }
 
-img{
-    width:200px;
+
+img {
+    width: 200px;
     height: 100px;
-    
+
 }
 
-.user{
+.user {
     background-color: #7fff00;
-    width:200px;
+    width: 200px;
     float: left;
     margin-top: 20px;
-    border:solid green;
+    border: solid green;
 }
 
-#user-image{
+#user-image {
     mix-blend-mode: multiply;
 }
 
-.computer{
-    
+.computer {
+
     background-color: #e08888;
-    width:200px;
-    float:right;
+    width: 200px;
+    float: right;
     margin-top: 20px;
     border: solid red;
 
 }
 
-#computer-image{
+#computer-image {
     mix-blend-mode: multiply;
 }
 
-.score-area{
-    background-color: rgb(245, 242, 95);
+
+/*Score area*/
+.score-area {
+    background-color: rgb(255, 252, 111);
     height: 100px;
 }
 
-.score-area p:nth-of-type(1){
-    background-color: rgb(92, 167, 108);
-    float:left;
+.score-area p:nth-of-type(1) {
+    background-color: hsl(133, 30%, 51%);
+    float: left;
 }
 
-.score-area p:nth-of-type(2){
-    background-color: rgb(241,131,150);
-    float:right;
+.score-area p:nth-of-type(2) {
+    background-color: hsl(350, 80%, 73%);
+    float: right;
 }
-#result{
-    text-align: center;
-}
-.number-tries{
+
+#result {
     text-align: center;
 }
 
-footer{
+
+/*Attempts Left*/
+.number-tries {
+    text-align: center;
+}
+
+
+/*Footer*/
+footer {
     margin-top: auto;
-    background-color:rgb(255, 190, 111);;
-    padding:10px;
+    background-color: rgb(255, 190, 111);
+    ;
+    padding: 10px;
     height: 150px;
 }
 
-footer p{
+footer p {
     text-align: center;
 }
 
+
 /*Media queries*/
 
-@media (min-width:768px){
-    .score-area{
-        background-color: rgb(245, 242, 95);
+@media (min-width:768px) {
+    .score-area {
+        background-color: rgb(255, 252, 111);
+        ;
         margin-left: 95px;
         margin-right: 95px;
         height: 100px;
     }
 
-    .game-area{
+    .game-area {
         background-color: #ffffff;
-        width:75%;
+        width: 75%;
         height: 400px;
-        margin-left:auto;
+        margin-left: auto;
         margin-right: auto;
         margin-top: 1%;
         text-align: center;
         display: block;
     }
-    
+
 }
