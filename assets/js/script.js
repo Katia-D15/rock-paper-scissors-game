@@ -49,7 +49,7 @@ function chooseScissors(){
 
 function rockUser() {
     user.innerHTML="";
-    let sentence = document.createElement('p')
+    let sentence = document.createElement('p');
     sentence.textContent='You choose rock';
 
     let img = document.createElement('img');
@@ -57,7 +57,7 @@ function rockUser() {
     img.alt ='Rock';
 
     user.appendChild(img);
-    user.appendChild(sentence)
+    user.appendChild(sentence);
 
 
 }
@@ -68,7 +68,7 @@ function rockUser() {
 
 function paperUser(){
     user.innerHTML="";
-    let sentence = document.createElement('p')
+    let sentence = document.createElement('p');
     sentence.textContent='You choose paper';
 
     let img = document.createElement('img');
@@ -76,7 +76,7 @@ function paperUser(){
     img.alt ='Paper';
 
     user.appendChild(img);
-    user.appendChild(sentence)
+    user.appendChild(sentence);
    
 
 }
@@ -87,7 +87,7 @@ function paperUser(){
 
 function scissorsUser(){
     user.innerHTML="";
-    let sentence = document.createElement('p')
+    let sentence = document.createElement('p');
     sentence.textContent='You choose scissors';
 
     let img = document.createElement('img');
@@ -95,7 +95,7 @@ function scissorsUser(){
     img.alt ='Scissors';
 
     user.appendChild(img);
-    user.appendChild(sentence)
+    user.appendChild(sentence);
   
 }
 
@@ -166,7 +166,9 @@ function winner(userChoice,computerChoice){
 }
 
 
-
+/**
+ * Function Play Game
+ */
 
 function playGame(userChoice){
     //Computer choice
@@ -191,7 +193,7 @@ function score(result){
     }else if(result === "computer"){
         computerScore++;
         computerScoreSpan.textContent = computerScore;
-        resultDiv.textContent="Computer wins!";
+        resultDiv.textContent="Computer wins!"; 
     }else{
         resultDiv.textContent="It's a draw!";
     }
@@ -208,30 +210,41 @@ function numberTries(){
     }else if(tries===1){
         document.getElementById('tries').innerText=0;
         let phrase = document.createElement('p');
-        phrase.textContent="Finish Game";
+        phrase.textContent="Finish Game"; 
+            
         document.getElementById('tries').appendChild(phrase);
         endGame();
+        
+        
+    }
+}
+
+/**
+ * Function that defines if user won, draw or lost the game
+ */
+
+function finish(){
+    if(userScore===computerScore){
+        alert(" Draw!")
+    }else if(userScore > computerScore){
+        alert(" You won!")
+    }else if(userScore < computerScore){
+        alert(" You lost!")
     }
 }
 /**
  * function that defines the end of game
  */
 function endGame(){
+    finish();
     rock.disabled = true;
     paper.disabled = true;
     scissors.disabled = true;
     
+      
 }
 
-function finish(){
-    if(userScoreSpan>computerScoreSpan){
-        alert("You win!");
-    }else if(userScoreSpan===computerScoreSpan){
-        alert("It's a draw!");
-    }else if(computerScoreSpan>userScoreSpan){
-        alert("Computer wins!");
-    }
-}
+
 
 
 

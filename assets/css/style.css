@@ -48,6 +48,7 @@ main{
 .btn{
     background-color: #88dae0;
     font-size: 20px;
+    margin: 3px;
 }
 
 img{
@@ -99,6 +100,9 @@ img{
 #result{
     text-align: center;
 }
+.number-tries{
+    text-align: center;
+}
 
 footer{
     margin-top: auto;
@@ -129,6 +133,7 @@ footer p{
         margin-right: auto;
         margin-top: 1%;
         text-align: center;
+        display: block;
     }
     
 }
