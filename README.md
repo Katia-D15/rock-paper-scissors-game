@@ -71,7 +71,7 @@ Rock, Paper, Scissors is a game written in JavaScript, fully responsive that wil
 
 ### Content
 
-- The styles instructions to make game are was taken from: Ultimate Rock, Paper, Scissors
+- The styles instructions to make game are was taken from: Ultimate Rock, Paper, Scissors.
 
 
 ### Media

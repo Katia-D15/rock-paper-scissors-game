@@ -47,7 +47,8 @@ main {
     margin-right: auto;
     margin-top: 1%;
     text-align: center;
-    display: table-cell;
+    
+    
 }
 
 .controls-area {
@@ -132,29 +133,167 @@ footer {
 
 footer p {
     text-align: center;
+    margin-bottom: 0.1px;
 }
-
 
 /*Media queries*/
 
-@media (min-width:768px) {
-    .score-area {
-        background-color: rgb(255, 252, 111);
-        ;
-        margin-left: 95px;
-        margin-right: 95px;
-        height: 100px;
+/*Media query: devices below 540px*/
+
+@media screen and (max-width:540px) {
+
+    
+    .game-area {
+        height: 400px;
+        display: table-cell;
     }
+    
+}
+
+ /*Media query: devices above 540px*/
+
+@media screen and (min-width:541px) {
 
     .game-area {
-        background-color: #ffffff;
-        width: 75%;
-        height: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 1%;
-        text-align: center;
+        height: 495px;
         display: block;
     }
 
+    img{
+        width: 230px;
+        height: 115px;
+    }
+
+    .user {
+        
+        width: 230px;
+        float: left;
+        margin-top: 20px;
+    }
+
+    .computer {
+
+        width: 230px;
+        float: right;
+        margin-top: 20px;
+    
+    }
+
+    .score-area{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    
+}
+
+
+
+/*Media query: tablets and larger(768px and up)*/
+
+@media screen and (min-width:768px) {
+
+    p{
+        font-size: 16px;
+    }
+   
+    .game-area {
+        width:70%;
+        
+    }
+
+    img{
+        width: 250px;
+        height: 125px;
+    }
+
+    .user {
+        
+        width: 250px;
+        float: left;
+        margin-top: 20px;
+    }
+
+    .computer {
+
+        width: 250px;
+        float: right;
+        margin-top: 20px;
+    
+    }
+
+    .score-area {
+        margin-left: 40px;
+        margin-right: 40px;
+        
+    }
+
+
+}
+
+/*Media query: laptops and larger(992px and up)*/
+@media screen and (min-width:992px) {
+
+    .game-area {
+        width: 80%;
+        
+    }
+
+    img{
+        width: 300px;
+        height: 150px;
+    }
+
+    .user {
+        
+        width: 300px;
+        float: left;
+        margin-top: 80px;
+    }
+
+    .computer {
+
+        width: 300px;
+        float: right;
+        margin-top: 80px;
+    
+    }
+
+    .score-area {
+        margin-left: 100px;
+        margin-right: 100px;
+      
+    }
+
+    
+}
+
+
+/*Media query: Desktops and larger(1200px and up)*/
+@media screen and (min-width:1200px) {
+
+    p{
+        font-size: 18px;
+    }
+
+    .game-area {
+        width: 50%;
+        height: 600px;  
+    }
+
+    .user{
+        margin-top: 30px;
+    }
+
+    .computer{
+        margin-top: 30px;
+    }
+
+    .score-area{
+        margin-left: 250px;
+        margin-right: 250px;
+    }
+
+    footer{
+        height: 155px;
+    }
 }
