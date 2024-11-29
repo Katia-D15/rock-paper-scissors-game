@@ -3,7 +3,7 @@
 Rock, Paper, Scissors Game is a website that is aimed to people who like the world of games.
 It is a game written using JavaScript programming, fully responsive that allows the user to play against the computer in a limit of five moves each round.
 
-![Website Screeshot](assets/images/website-screenshot.png)
+![Website Screeshot](./assets/images/website-screenshot.png)
 
 
 ## Features
@@ -12,13 +12,13 @@ It is a game written using JavaScript programming, fully responsive that allows 
 
 - The main page includes title: 'Rock, Paper, Scissors Game', where the user easily understands that the website is a game.
 
-![Header](assets/images/header-screenshot.png)
+![Header](./assets/images/header-screenshot.png)
 
 -_Game area_
 
 - It is made up of three buttons, where the user selects a button depending on the option they want to use to play,which can be rock, paper or scissors. Two images appear below the buttons, in two colors: green for the user and red for the computer.
 
-![Game area](assets/images/game-area-screenshot.png)
+![Game area](./assets/images/game-area-screenshot.png)
 
 -_Score_
 
@@ -26,13 +26,13 @@ It is a game written using JavaScript programming, fully responsive that allows 
 
 - At each game's round, a text appears showing the result of the round, that can be : win, lose. draw' depending of the maiden choices.
 
-![Score](assets/images/score-screenshot.png)
+![Score](./assets/images/score-screenshot.png)
 
 -_Attempts Lefts_
 
 - Section composed of the number of game attempts that the user has, in this case five and which decreases throughout the game.
 
-![Attempts Lefts](assets/images/attempts-left-screenshot.png)
+![Attempts Lefts](./assets/images/attempts-left-screenshot.png)
 
 
 -_Game Rules_
@@ -42,7 +42,7 @@ It is a game written using JavaScript programming, fully responsive that allows 
   - Paper wraps rock
   - Scissors cuts paper
 
-  ![Game Rules](assets/images/footer-screenshot.png)
+  ![Game Rules](./assets/images/footer-screenshot.png)
 
 ## Testing
 
@@ -51,7 +51,7 @@ It is a game written using JavaScript programming, fully responsive that allows 
 - I confirmed that this project is responsive, looks good and functions on all standard screen sizes using the devtools device toolbar.
 - I confirmed that the colors and fonts choosen are easy to read and accessible by running it through lighthouse in devtools.
 
-![Lighthouse](assets/images/lighthouse-screenshot.png)
+![Lighthouse](./assets/images/lighthouse-screenshot.png)
 
 ### Bugs
   Solved bugs
